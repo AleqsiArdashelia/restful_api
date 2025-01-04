@@ -25,20 +25,6 @@ This project is a RESTful API designed to manage user data. It allows creating, 
 
 ---
 
-## File Structure
-
-```
-project/
-├── main.py               # Main entry point of the application
-├── requirements.txt      # Dependencies required for the project
-├── readme.md             # Project documentation
-├── utils/                # Utility functions and scripts
-│   ├── create_database.py  # Script to initialize the database
-│   ├── helpers.py          # Helper functions for request parsing
-│   └── logger_setup.py     # Logging setup for the application
-```
-
----
 
 ## Setup Instructions
 
@@ -60,7 +46,7 @@ project/
 2. Create a virtual environment and activate it:
     ```bash
     python -m venv venv
-    source venv/bin/activate    # On Windows: venv\Scripts\activate
+    source venv\Scripts\activate
     ```
 
 3. Install dependencies:
@@ -72,8 +58,8 @@ project/
     - Create a `.env` file in the root directory.
     - Add the following variables:
       ```env
-      SQLALCHEMY_DATABASE_URI=sqlite:///instance/database.db
-      DB_PATH=instance/database.db
+      SQLALCHEMY_DATABASE_URI="sqlite:///database.db"
+      DB_PATH="\path\to\database" # direct to project root directory
       ```
 
 5. Initialize the database:
